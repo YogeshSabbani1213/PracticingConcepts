@@ -20,7 +20,6 @@ export default function SearchBar() {
   const [products, setProducts] = useState<Products[]>([])
   async function getProducts() {
     const { data } = await API.get('/products')
-    // console.log('data:', data.products);
     setProducts(data.products)
   }
 
@@ -32,7 +31,7 @@ export default function SearchBar() {
     setSearch(e.target.value)
   }
 
-  const searchedProducts = products.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()))
+  const searchedProducts = products.filter((item)=>item.title.toLowerCase().includes(search.toLowerCase()))
 
 
   return (
@@ -81,7 +80,7 @@ export default function SearchBar() {
             absolute
             inset-0
             rounded-2xl
-            bg-gradient-to-r
+            bg-linear-to-r
             from-blue-500/10
             via-purple-500/10
             to-pink-500/10
@@ -102,6 +101,8 @@ export default function SearchBar() {
             <h1 className="text-white font-bold">{item.title}</h1>
             <p className="text-sm  text-gray-500">{item.description}</p>
             <p className="font-bold">{item.price}</p>
+            <p className="text-gray-400">{item.category}</p>
+            <p className="text-gray-400">{item.category}</p>
             <p className="text-gray-400">{item.category}</p>
           </div>
         ))}
