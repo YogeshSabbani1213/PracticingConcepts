@@ -1,9 +1,11 @@
-import React from 'react'
-import SearchBar from './component/SearchBar'
+// import React from 'react'
+import SearchBar from './components/SearchBar'
+import Header from './components/Header'
 
 const App = () => {
   return (
     <div>
+      <Header/>
       <SearchBar/>
     </div>
   )

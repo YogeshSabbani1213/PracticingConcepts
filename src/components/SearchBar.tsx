@@ -35,7 +35,7 @@ export default function SearchBar() {
 
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4">
+    <section className="mt-26 max-w-5xl mx-auto">
       <div className="relative group">
         {/* Search Icon */}
         <Search
@@ -107,6 +107,6 @@ export default function SearchBar() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
