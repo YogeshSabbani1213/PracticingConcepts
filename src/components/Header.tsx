@@ -7,7 +7,7 @@ function Header() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     return (
         <section className="fixed top-0 left-0 w-full z-50 ">
-            <div className="bg-red-500 max-w-6xl mx-auto mt-7 px-10 py-6 rounded-2xl text-white border-2 border-amber-50 flex items-center justify-between">
+            <div className="bg-white/10 max-w-6xl mx-auto mt-7 px-10 py-6 rounded-2xl text-white border-2 border-amber-50 flex items-center justify-between">
                 {/* logo */}
                 <div>
                     <h1 className="">YogeshSabbani</h1>
