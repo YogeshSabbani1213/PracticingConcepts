@@ -21,7 +21,9 @@ function Header() {
                         <li><a href="#Reviews">Reviews</a></li>
                         <li><a href="#Contact">Contact</a></li>
                         <li><a href="#Services">Services</a></li>
+                        <li><a href="#Products">Products</a></li>
                     </ul>
+                    
                 </nav>
 
 

@@ -104,6 +104,7 @@ export default function SearchBar() {
             <p className="text-gray-400">{item.category}</p>
             <p className="text-gray-400">{item.category}</p>
             <p className="text-gray-400">{item.category}</p>
+            <button className="shadow-sm px-4 py-1 bg-blue-500 rounded-full">Add to cart</button>
           </div>
         ))}
       </div>
