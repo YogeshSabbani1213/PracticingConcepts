@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { User } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -23,13 +24,16 @@ function Header() {
                         <li><a href="#Services">Services</a></li>
                         <li><a href="#Products">Products</a></li>
                     </ul>
-                    
+
                 </nav>
 
 
                 {/* button */}
                 <div className="hidden md:block md:flex md:gap-4">
-                    <button className=" px-2 py-1 rounded-xl bg-blue-400">Cart</button>
+                    <Link to='/cart'>
+                        <button className=" px-2 py-1 rounded-xl bg-blue-400">Cart</button>
+
+                    </Link>
                     <button><User /></button>
                 </div>
 

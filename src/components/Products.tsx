@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import API from "../services/api"
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../app/store.ts";
+import { addtoCart } from "../app/cartSlice";
 // import { log } from "console";
 
 function Products() {
@@ -22,6 +25,8 @@ function Products() {
         getProducts()
 
     }, [])
+
+    const dispatch = useDispatch<AppDispatch>();
     return (
 
         <section id="#products" className="mt-4  max-w-6xl mx-auto ">
@@ -37,7 +42,8 @@ function Products() {
                         <p className="text-sm  text-gray-500">{item.description}</p>
                         <p className="font-bold">{item.price}</p>
                         <p className="text-gray-400">{item.category}</p>
-                        <button className="shadow-sm px-4 py-1 bg-blue-500 rounded-full">Add to cart</button>
+                        <button onClick={()=>dispatch(addtoCart({...item, quantity: 1}))}
+                         className="shadow-sm px-4 py-1 bg-blue-500 rounded-full">Add to cart</button>
                     </div>
                 ))}
             </div>
