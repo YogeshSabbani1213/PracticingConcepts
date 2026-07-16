@@ -6,6 +6,7 @@ import Whatsapp from './components/Whatsapp'
 import Products from './components/Products'
 import Cart from './pages/cart'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import UseMemo from './components/UseMemo'
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Hero />
+        <UseMemo/>
         <Products />
         <SearchBar />
         <Whatsapp />
