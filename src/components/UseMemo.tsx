@@ -4,19 +4,22 @@ function UseMemo() {
   const [number, setNumber] = useState<number>(1000000000);
   const [counter, setCounter] = useState<number>(0);
 
-  let total = 0;
+  // let total = 0;
 
-  for (let i = 1; i <= number; i++) {
-    total += i;
-  }
+  // for (let i = 1; i <= number; i++) {
+  //   total += i;
+  // }
 
-    // const total = useMemo(()=>{
-    //     let sum = 0;
-    //     for(let i=0;i<number;i++){
-    //         sum+=i;
-    //     }
-    //     return sum;
-    // },[number])
+
+  const total = useMemo(() => {
+    let sum = 0;
+    for (let i = 1; i <= number; i++) {
+      sum += i;
+    }
+    return sum;
+  }, [number])
+
+
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-900 px-4">
