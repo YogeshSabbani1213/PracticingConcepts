@@ -7,6 +7,7 @@ import Products from './components/Products'
 import Cart from './pages/cart'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import UseMemo from './components/UseMemo'
+import Login from './pages/Login'
 
 
 const router = createBrowserRouter([
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Hero />
+        <Login/>
         <UseMemo/>
         <Products />
         <SearchBar />
