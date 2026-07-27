@@ -31,7 +31,7 @@ function Products() {
 
         <section id="#products" className="mt-4  max-w-6xl mx-auto ">
             <div>
-                <h1 className=" text-white text-5xl text-center ">ALL PRODUCTS</h1>
+                
             </div>
 
             <div className="grid grid-cols-3 m-4 gap-2 ">
