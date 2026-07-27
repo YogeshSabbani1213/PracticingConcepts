@@ -11,7 +11,7 @@ function Cart() {
     0
   );
 
-  const shipping = cartItems.length > 0 ? 100 : 0;
+  
   const total = subtotal + shipping;
 
   if (cartItems.length === 0) {
