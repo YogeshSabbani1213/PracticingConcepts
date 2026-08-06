@@ -1,12 +1,15 @@
 import { GoogleLogin } from "@react-oauth/google";
 import { googleLogin } from "../services/auth";
+import { useState } from "react";
 
 function Login() {
+  const [response,setResponse]=useState<any>(null);
   const handleSuccess = async (credentialResponse: any) => {
     try {
       const response = await googleLogin(credentialResponse.credential);
 
-      console.log(response.data);
+      console.log('response:',response.data);
+      setResponse(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -24,6 +27,11 @@ function Login() {
             onSuccess={handleSuccess}
             onError={() => console.log("Login Failed")}
           />
+          {response && (
+            <div>
+              <p className="text-black text-2xl">{response.user.name}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
