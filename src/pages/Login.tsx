@@ -7,9 +7,9 @@ function Login() {
   const handleSuccess = async (credentialResponse: any) => {
     try {
       const response = await googleLogin(credentialResponse.credential);
-
       console.log('response:',response.data);
       setResponse(response.data);
+      localStorage.setItem('token',response.data.token)
     } catch (error) {
       console.log(error);
     }
